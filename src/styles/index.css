@@ -1,0 +1,513 @@
+@import './sidebar.css';
+body {
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+  font-size: 14px;
+  color: #535353;
+  /*overflow-x: hidden;*/
+}
+
+label {
+  /* font-weight: 700; */
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#app{
+  height: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+div:focus{
+  outline: none;
+ }
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+ul{
+  list-style: none;
+  padding: 0;
+}
+clearfix { 
+  *zoom: 1; 
+} 
+ 
+.clearfix:before, 
+.clearfix:after { 
+  display: table; 
+  line-height: 0; 
+  content: ""; 
+} 
+ 
+.clearfix:after { 
+  clear: both; 
+} 
+.pull-left{
+  float: left
+}
+.pull-right{
+  float: right
+}
+
+/* main-container全局样式 */
+#app .main-container{
+  position: relative;
+  z-index: 1;
+  background: #f4f8fb;
+}
+.app-main{
+  min-width: 900px;
+  min-height: 100%;
+  padding: 0 20px 20px;
+}
+/*左右结构*/
+.left-menu{
+  width: 330px;
+  min-height: 800px;
+}
+.left-top{
+  width: 100%;
+  height: 79px;
+  padding: 0 20px;
+  line-height: 79px;
+  background: #E8ECED;
+  border-bottom: 1px solid #D8D8D8;
+}
+
+/*按钮样式组*/
+.big_btn{
+  width: 116px;
+  height: 38px;
+}
+.bgcOrange{
+  background: #d69201;
+  border: #d69201;
+}
+/* 删除按钮 */
+.delete_btn{ 
+  background:#d61518;
+  border-radius:4px;
+  width:50px;
+  height:26px;
+  color: #ffffff;
+}
+
+/* 修改按钮 */
+.modify_btn{ 
+  background:#d61518;
+  border-radius:4px;
+  width:50px;
+  height:26px;
+  color: #ffffff;
+}
+
+/* 查看按钮 */
+.check_btn{
+background:#568d07;
+border-radius:4px;
+width:50px;
+height:26px;
+color: #ffffff;
+}
+
+/* 查看按钮 */
+.bgcBlue{
+background:#2a7593;
+border-radius:26px;
+width:100px;
+height:40px;
+}
+
+/* 高级搜索 */
+.AdvancedSearch{
+font-size:16px;
+color:#1e556b;
+}
+
+
+/*grg css*/
+.grg_box {
+  background: #ffffff;
+  box-shadow: 0 0 7px 3px rgba(182, 182, 182, 0.09);
+  border-radius: 6px;
+  display:inline-block;
+  vertical-align:top; 
+  font-size: 12px;
+}
+.grg_box_full_width {
+  width: 100%;
+}
+.grg_box_half_width{
+  width: calc( 50% - 10px );
+}
+
+.grg_report_index > img {
+  width: calc(100% + 40px);
+  margin: 0 -20px;
+  position: absolute;
+  z-index: -50;
+}
+.grg_report_statis {
+  padding-top: 90px;
+}
+.grg_report_statis_item {
+  float: left;
+  width: 24%;
+  box-shadow: 0 2px 3px 0 rgba(64, 72, 83, 0.2);
+  margin-left: 1.3%;
+  padding: 4% 0;
+  text-align: center;
+}
+.grg_report_statis_item:first-child {
+  margin-left: 0;
+}
+.grg_report_statis_item div {
+  display: inline-block;
+  height: 80px;
+  letter-spacing: 2px;
+  padding-top: 11px;
+  padding-left: 8%;
+}
+.grg_report_statis_item div i {
+  display: block;
+  font-size: 14px;
+  color: #999999;
+  font-style: normal;
+  line-height: 25px;
+}
+.grg_report_statis_item div span {
+  display: block;
+  font-size: 26px;
+  color: #404853;
+  line-height: 35px;
+}
+
+.grg_report_statis_item img {
+  height: 80px;
+  vertical-align: top;
+}
+.grg_marT {
+  margin-top: 20px;
+}
+.grg_mart{
+  margin-top: 50px;
+}
+.grg_marR {
+  margin-right: 20px;
+}
+.grg_mar{
+  margin-right: 20px;
+  margin-top: -35px;
+}
+.grg_marB {
+  margin-bottom: 20px;
+}
+.grg_padd {
+  padding: 20px;
+}
+
+.grg_searchT {
+}
+.grg_searchT h3 {
+  font-size: 16px;
+  color: #1e556b;
+  height: 36px;
+  line-height: 36px;
+}
+/* .grg_btn {
+  border-radius: 26px;
+  width: 96px;
+  height: 36px;
+  line-height: 36px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.grg_expland_btn {
+  border: 2px solid #619618;
+  color: #619618;
+}
+.grg_expland_btn:hover {
+  opacity: 0.7;
+}
+.grg_export_btn {
+  border: 2px solid #d99c1a;
+  color: #d99c1a;
+}
+.grg_export_btn:hover {
+  opacity: 0.7;
+}
+
+.grg_search_btn {
+  background: #2a7593;
+  color: #fff;
+}
+.grg_search_btn:hover {
+  opacity: 0.9;
+  color: #fefefe;
+} */
+
+.grg_search_push {
+  position: absolute;
+  left: 50%;
+  margin-left: -13.5px;
+  top: -10px;
+  cursor: pointer;
+  z-index: 11;
+}
+.grg_search_pull {
+  width: 100px !important;
+  height: 40px !important;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  top: 15px;
+  cursor: pointer;
+  fill: #176785 !important;
+  z-index: 11;
+}
+/*box 曲槽--截图操作*/
+.big_radian {
+  position: absolute;
+  width: 245px;
+  height: 74px;
+  left: 50%;
+  margin-left: -122.5px;
+  top: -9px;
+  background: url(../assets/images/big_radian.png) no-repeat #f4f8fb;
+  text-align: center;/*图片居中显示*/
+}
+.big_radian img{
+  height: 100%;
+}
+.small_radian {
+  position: absolute;
+  width: 172px;
+  height: 46px;
+  left: 50%;
+  margin-left: -86px;
+  top: -10px;
+  background: url(../assets/images/small_radian.png) no-repeat #f4f8fb;
+  text-align: center;/*图片居中显示*/
+}
+.small_radian img{
+  height: 100%;
+}
+
+.grg_small_taskList {
+  padding-top: 15px;
+  margin-left: -10px;
+}
+.grg_small_taskList li {
+  display: inline-block;
+  vertical-align: top;
+  width: 117px;
+  padding: 10px;
+  text-align: center;
+  background: #f2faf2;
+  color: #666666;
+  margin-left: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.grg_small_taskList li.expand {
+  height: auto;
+  line-height: 20px;
+  padding: 5px 10px;
+  word-break: break-all;
+  overflow: visible;
+  text-overflow: clip;
+  white-space: normal;
+}
+.grg_small_taskList li.active {
+  background: #568d07;
+  color: #ffffff;
+}
+.grg_table {
+  width: calc(100% + 40px);
+  max-width: calc(100% + 40px);
+  margin: 20px -20px 0;
+}
+#app .el-table::before {
+  border-bottom: 1px dashed #d8d8d8;
+}
+#app .el-table thead tr {
+  background: #f8fdff;
+  border: 1px dashed #d8d8d8;
+}
+#app .el-table th {
+  background: #f8fdff;
+  border-top: 1px dashed #d8d8d8;
+  border-bottom: 1px dashed #d8d8d8;
+  color: #404853;
+}
+#app .el-table td {
+  border-bottom: 1px dashed #f2f2f2;
+}
+#app .el-pager li{
+  color:#2a7a9a;
+  background: none;
+}
+#app .el-pagination.is-background .el-pager li:not(.disabled).active{
+  color:#fff;
+  background: #2a7a9a;
+  border-radius: 100%;
+}
+#app .el-pagination button{
+  color:#2a7a9a;
+  background: none;
+}
+#app .el-pagination button:disabled{
+  color: #8acae3
+}
+
+/*******公共按钮样式*******/
+.grg_btn{
+  cursor: pointer;
+  text-align: center;
+  border: none;
+}
+.grg_btn_mid{
+  width: 100px;
+  height: 40px;
+  line-height: 1;
+  font-size: 16px;
+  letter-spacing: 2px;
+  background: none;
+}
+.grg_btn_s{
+  width: 70px;
+  height: 30px;
+  line-height: 1;
+}
+.grg_btn_xs{
+  width: 50px;
+  height: 26px;
+  line-height: 1;
+}
+.grg_btn_big_radius{
+  border-radius:100px;
+}
+.grg_btn_small_radius{
+  border-radius:4px;
+}
+.grg_btn_color_white{
+  color:#ffffff;
+}
+.grg_btn_color_white:hover{
+  color:#ffffff;
+}
+.grg_btn_color_green{
+  color:#568d07;
+}
+.grg_btn_color_green:hover{
+  color:#568d07;
+}
+.grg_btn_color_orange{
+  color:#d69201;
+}
+.grg_btn_color_orange:hover{
+  color:#d69201;
+}
+.grg_btn_color_red{
+  color:#d61518;
+}
+.grg_btn_bgcolor_blue{
+  background-color:#2a7a9a;
+}
+.grg_btn_bgcolor_blue:hover{
+  background-color: #2a7a9a;
+  opacity: 0.8;
+}
+.grg_btn_bgcolor_white{
+  background:#ffffff;
+}
+.grg_btn_bgcolor_green{
+  background:#568d07;
+}
+.grg_btn_bgcolor_orange{
+  background:#d69201;
+}
+.grg_btn_bgcolor_gray{
+  background:#999999;
+}
+.grg_btn_bgcolor_red{
+  background:#d61518;
+}
+.grg_btn_border_green{
+  border:1px solid #568d07;
+}
+.grg_btn_border_green:hover{
+  border:1px solid #568d07;
+  background: none;
+  opacity: 0.8;
+}
+.grg_btn_border_blue{
+  border:1px solid #2a7a9a;
+}
+.grg_btn_border_blue:hover{
+  border:1px solid #2a7a9a;
+  opacity: 0.8;
+}
+.grg_btn_border_orange{
+  border:1px solid #d69201;
+}
+.grg_btn_border_orange:hover{
+  border:1px solid #d69201;
+  background: none;
+  opacity: 0.8;
+}
+.grg_btn_border_red{
+  border:1px solid #d61518;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
